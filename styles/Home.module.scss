@@ -1,0 +1,161 @@
+@import './responsive.module.scss';
+
+.app {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    width: 60vw;
+    min-height: 15vh;
+    background-color: #ffffff;
+    -webkit-box-shadow: -1px 0px 26px -2px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: -1px 0px 26px -2px rgba(0, 0, 0, 0.62);
+    box-shadow: -1px 0px 26px -2px rgba(0, 0, 0, 0.62);
+
+    @include desktop {
+        width: 80vw;
+    }
+
+    @include tablet {
+        width: 80vw;
+    }
+
+    @include mobile {
+        width: 85vw;
+    }
+}
+
+.card_header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    @include tablet {
+        flex-wrap: wrap;
+    }
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.job_title {
+    margin-top: 22px;
+    margin-left: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    width: 22.92vw;
+    white-space: nowrap;
+
+    @include mobile {
+        width: 22.92vw;
+        overflow-wrap: break-word;
+        // word-wrap: break-word;
+    }
+}
+
+.company_name {
+    margin-left: 30px;
+    font-size: 18px;
+    color: gray;
+
+    @include mobile {
+        margin-top: 10px;
+        margin-left: 8.36vw;
+    }
+
+    @include tablet {
+        margin-left: 32.36vw;
+    }
+}
+
+.job_location {
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+
+    @include mobile {
+        margin-left: 8.36vw;
+    }
+
+    @include tablet {
+        margin-left: 32.36vw;
+    }
+}
+
+.tech_stack {
+    margin-left: 30px;
+    display: inline-flex;
+    flex-flow: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-basis: content;
+
+    span {
+        border: 2px solid lightblue;
+        border-radius: 5px;
+        padding: 0.3rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.3rem; // top right-left bottom
+    }
+
+}
+
+.application_link {
+    margin-left: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 70vw;
+
+    .apply_button {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+
+.logo {
+    height: 1em;
+    margin-left: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .card,
+    .footer {
+        border-color: #222;
+    }
+
+    .code {
+        background: #111;
+    }
+
+    .logo img {
+        filter: invert(1);
+    }
+}
